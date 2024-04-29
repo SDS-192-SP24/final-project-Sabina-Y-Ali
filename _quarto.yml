@@ -1,0 +1,50 @@
+project:
+  type: website
+  output-dir: docs
+  
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+    toc_depth: 2
+    highlight: tango
+    df_print: paged
+    lib_dir: site_libs
+    self_contained: no
+# All icons were obtained from https://icons.getbootstrap.com/
+
+
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+
+website:   
+  page-navigation: true
+  favicon: /images/ice_pop.jpg
+  title: "My page"
+  
+  
+  navbar:
+    
+    left:
+    - text: About
+      href: about.qmd
+    - icon: book 
+      href: https://mdsr-book.github.io/mdsr3e/
+    
+    right:
+    - icon: github
+      href: https://www.github.com
+
+  
+  # Note if you want to make a footer link to a file you'll need to create that file. 
+  
+  page-footer:
+    right: 
+    - text: credits
+      href: credits.qmd
+
+      

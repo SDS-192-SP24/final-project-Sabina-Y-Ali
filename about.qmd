@@ -1,0 +1,21 @@
+---
+title: "About Me"
+subtitle: "This is a fake about me for demonstration purposes. "
+format: html
+---
+
+::: columns
+::: {.column width="70%"}
+![](images/person.jpg)
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="20%"}
+My name is Wheebuns chewiebag. My name was generated from [this site](https://www.imagineforest.com/blog/funny-name-generator/). My photo is from [here](https://pxhere.com/en/photo/182659).
+:::
+:::
+
+If you would like to contact me please do so at 248-434-5508
