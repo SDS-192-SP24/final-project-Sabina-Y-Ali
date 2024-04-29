@@ -1,0 +1,51 @@
+---
+title: "Data Wrangling"
+format: html
+editor: visual
+---
+
+## 2021 nyc stop and frisk data
+
+```{r}
+#| include: false
+
+
+library(readr)
+sqf_2021 <- read_csv("~/SDS 192/classwork/sqf-2021.csv")
+```
+
+```{r}
+#| include: false
+library(tidyverse)
+
+sqf_2021<- 
+  sqf_2021|>
+  select( SUSPECT_RACE_DESCRIPTION, SUSPECT_ARRESTED_FLAG)
+
+```
+
+```{r}
+#| include: false
+sqf_2021$SUSPECT_ARRESTED_FLAG<-
+  recode(
+    sqf_2021$SUSPECT_ARRESTED_FLAG,
+    "Y"= 1,
+    "N"= 0
+  )
+```
+
+```{r}
+#| echo: false
+#| label: tbl-1
+#| tbl-cap: "This table shows a summary of the 'Stop and Frisk' data from NYC police"
+
+library(knitr)
+stop_frisk_analysis<- sqf_2021|>
+  group_by(SUSPECT_RACE_DESCRIPTION)|>
+  summarize(stops_by_race=n(),
+            percent_stopped= stops_by_race/ 8947 *100,
+            percent_arrested= sum(SUSPECT_ARRESTED_FLAG)/ stops_by_race *100)|>
+  arrange(percent_arrested)|>
+  kable()
+stop_frisk_analysis
+```

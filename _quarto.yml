@@ -36,10 +36,13 @@ website:
       href: https://mdsr-book.github.io/mdsr3e/
     
     right:
+    - text: Map
+      href: Examples/map_example.qmd
+    - text: Table
+      href: Examples/data_wrangling.qmd
     - icon: github
       href: https://www.github.com
 
-  
   # Note if you want to make a footer link to a file you'll need to create that file. 
   
   page-footer:

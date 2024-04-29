@@ -14,7 +14,7 @@ format: html
 :::
 
 ::: {.column width="20%"}
-My name is Wheebuns chewiebag. My name was generated from [this site](https://www.imagineforest.com/blog/funny-name-generator/). My photo is from [here](https://pxhere.com/en/photo/182659).
+My name is Bodori Hoborider. My name was generated from [this site](https://www.imagineforest.com/blog/funny-name-generator/). My photo is from [here](https://pxhere.com/en/photo/182659).
 :::
 :::
 
