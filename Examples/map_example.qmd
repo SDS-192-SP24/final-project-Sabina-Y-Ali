@@ -1,8 +1,10 @@
 ---
 title: "Monarch Watch"
-author: "Sabina Ali"
+author: "Name"
 format: html
 editor: visual
+message: false
+warning: false
 ---
 
 ```{r}
@@ -19,7 +21,7 @@ library(knitr)
 
 Every year Monarch Butterflies fly south for the winter. They start in higher latitudes and migrate south to their wintering areas in Mexico.
 
-[Monarch Watch](https://monarchwatch.org/blog/) is a citizen science initiative housed in the University of Kansas. Every year volunteers tag these butterflies and release them so their progress in their southern migration can be mapped. If someone finds a monarch with a tag they [can report it.](https://docs.google.com/forms/d/e/1FAIpQLSetTI4HYcyb1GfIyo-U5rAuVVezvOrwicz2ztIt244Vh7S4VA/viewform) We'll examine only the Eastern Monarch's trip south.
+[Monarch Watch](https://monarchwatch.org/blog/) is a citizen science initiative housed in the University of Kansas. Every year volunteers tag these butterflies and release them so their progress in their southern migration can be mapped. If someone finds a monarch with a tag they [can report it.](https://docs.google.com/forms/d/e/1FAIpQLSetTI4HYcyb1GfIyo-U5rAuVVezvOrwicz2ztIt244Vh7S4VA/viewform) We examine only the Eastern Monarch's trip south and create a map showing the areas the butterflies are sighted in the US.
 
 ```{r}
 #| include: false
@@ -57,12 +59,9 @@ names(butterfly_dataframes) <-   c( "US_CAN_Recovery_2022", "Pre_2023_Mexico_Rec
 #| include: false
 USA_map <-  maps::map("state", plot = FALSE, fill = TRUE) |> 
   st_as_sf(coords = c("x", "y"), crs = 4326)
-# Map out USA_map here. 
-USA_map |> ggplot()+
-  geom_sf()
 ```
 
-## Make a Chrolopleth map of the US.
+## A Chrolopleth map of the US.
 
 ```{r}
 #| include: false

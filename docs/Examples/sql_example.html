@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Name">
 
-<title>My page - Monarch Watch</title>
+<title>My page - Querying a MySQL database</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -97,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../Examples/map_example.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../Examples/map_example.html" rel="" target="">
  <span class="menu-text">Map</span></a>
   </li>  
   <li class="nav-item">
@@ -105,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Table</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../Examples/sql_example.html" rel="" target="">
+    <a class="nav-link active" href="../Examples/sql_example.html" rel="" target="" aria-current="page">
  <span class="menu-text">SQL</span></a>
   </li>  
   <li class="nav-item compact">
@@ -131,19 +130,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Monarch Watch</h1>
+<h1 class="title">Querying a MySQL database</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Name </p>
-          </div>
-  </div>
     
   
     
@@ -152,23 +145,98 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Every year Monarch Butterflies fly south for the winter. They start in higher latitudes and migrate south to their wintering areas in Mexico.</p>
-<p><a href="https://monarchwatch.org/blog/">Monarch Watch</a> is a citizen science initiative housed in the University of Kansas. Every year volunteers tag these butterflies and release them so their progress in their southern migration can be mapped. If someone finds a monarch with a tag they <a href="https://docs.google.com/forms/d/e/1FAIpQLSetTI4HYcyb1GfIyo-U5rAuVVezvOrwicz2ztIt244Vh7S4VA/viewform">can report it.</a> We examine only the Eastern Monarch’s trip south and create a map showing the areas the butterflies are sighted in the US.</p>
-<section id="a-chrolopleth-map-of-the-us." class="level2">
-<h2 class="anchored" data-anchor-id="a-chrolopleth-map-of-the-us.">A Chrolopleth map of the US.</h2>
+<p>Using SQL queries on the school’s server, I have compiled data related to the filmographies of actresses Andie MacDowell and Nicole Kidman.</p>
+<p>For Andie MacDowell, I’ve created a table detailing her complete filmography, including the title of each movie, its production year, and the character she portrayed, arranged chronologically.</p>
 <div class="cell">
-<div class="cell-output-display">
-<div id="fig-1" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="map_example_files/figure-html/fig-1-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: The map shows butterfly sightings in each US state</figcaption>
-</figure>
+<div class="knitsql-table">
+<table class="table table-sm table-striped small">
+<caption>Displaying records 1 - 5</caption>
+<colgroup>
+<col style="width: 58%">
+<col style="width: 18%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">title</th>
+<th style="text-align: right;">production_year</th>
+<th style="text-align: left;">name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Greystoke: The Legend of Tarzan, Lord of the Apes</td>
+<td style="text-align: right;">1984</td>
+<td style="text-align: left;">Miss Jane Porter</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">St.&nbsp;Elmo’s Fire</td>
+<td style="text-align: right;">1985</td>
+<td style="text-align: left;">Dale Biberman</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sex, Lies, and Videotape</td>
+<td style="text-align: right;">1989</td>
+<td style="text-align: left;">Ann Bishop Mullany</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Green Card</td>
+<td style="text-align: right;">1990</td>
+<td style="text-align: left;">BrontÃ«</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">The Object of Beauty</td>
+<td style="text-align: right;">1991</td>
+<td style="text-align: left;">Tina</td>
+</tr>
+</tbody>
+</table>
 </div>
+</div>
+<p>In the following table, I’ve extracted data from a webpage listing Nicole Kidman as the most prolific actress, specifically capturing the names and production years of all the movies she’s been in, ordered by production year in descending order.</p>
+<div class="cell">
+<div class="knitsql-table">
+<table class="table table-sm table-striped small">
+<caption>Displaying records 1 - 5</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">title</th>
+<th style="text-align: right;">production_year</th>
+<th style="text-align: left;">name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Aquaman</td>
+<td style="text-align: right;">2018</td>
+<td style="text-align: left;">Queen Atlanna</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Destroyer</td>
+<td style="text-align: right;">2018</td>
+<td style="text-align: left;">Erin Bell</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Boy Erased</td>
+<td style="text-align: right;">2018</td>
+<td style="text-align: left;">Nancy Conlon</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">How to Talk to Girls at Parties</td>
+<td style="text-align: right;">2017</td>
+<td style="text-align: left;">Queen Boadicea</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">The Upside</td>
+<td style="text-align: right;">2017</td>
+<td style="text-align: left;">Yvonne</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

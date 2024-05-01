@@ -1,12 +1,12 @@
 ---
 title: "About Me"
-subtitle: "This is a fake about me for demonstration purposes. "
+subtitle: "This is me. "
 format: html
 ---
 
 ::: columns
 ::: {.column width="70%"}
-![](images/person.jpg)
+![](images/my_fake_photo.jpg)
 :::
 
 ::: {.column width="10%"}
@@ -14,8 +14,8 @@ format: html
 :::
 
 ::: {.column width="20%"}
-My name is Bodori Hoborider. My name was generated from [this site](https://www.imagineforest.com/blog/funny-name-generator/). My photo is from [here](https://pxhere.com/en/photo/182659).
+My name is Bald Baby. My name was generated from [this site](https://www.imagineforest.com/blog/funny-name-generator/). My photo is from [here](https://pxhere.com/en/photo/182659).
 :::
 :::
 
-If you would like to contact me please do so at 248-434-5508
+If you would like to contact me please do so at 123-456-7899

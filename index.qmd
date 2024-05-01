@@ -1,12 +1,21 @@
 ---
-title: "final_project"
+title: "Final Project"
 author: "My name"
 ---
 
-This is my landing page
+## Hi🙋‍♀️
 
+Welcome to my website! Here, I showcase some of my favorite projects from my introduction to data science class. First, I delve into Monarch Watch, where I utilize citizen science to observe the migratory patterns of Eastern Monarch Butterflies. Second, I shed light on the racial demographics and implications of the NYPD's stop and frisk activity. Finally, I provide an analysis of the filmographies of two well-known actresses, Nicole Kidman and Andie MacDowell, which were retrieved using SQL queries.
 
-hi
+### Monarch Watch
+Every year Monarch Butterflies fly south for the winter. They start in higher latitudes and migrate south to their wintering areas in Mexico.
 
-This is an example of a map
-[A map](Examples/map_example.qmd)
+Monarch Watch is a citizen science initiative housed in the University of Kansas. Every year volunteers tag these butterflies and release them so their progress in their southern migration can be mapped. If someone finds a monarch with a tag they can report it. We examine only the Eastern Monarch's trip south and create [a map](Examples/map_example.qmd) showing the areas the butterflies are sighted in the US.
+
+### NYC Stop and Frisk
+The New York City Police Department (NYPD) is able to employ the stop and frisk technique when an officer has good reason to believe that someone is armed and dangerous,. This strategy includes pulling someone over, asking them questions, and patting down their clothes to check for weapons or other indications of criminal activity. The citizen may also be subjected to physical force by the police.
+
+[This table](Examples/data_wrangling.qmd) shows racial demographics in relation to the stop and frisk activity conducted by the NYPD in 2021. It outlines the number of stops by race, the percentage of people stopped from the total number of stops for each racial group, and the percentage of people arrested from the total number of arrests for each racial group.
+
+### Filmographies of Actresses
+Using SQL queries on the school's server, I have compiled data related to the filmographies of actresses Andie MacDowell and Nicole Kidman. [These tables](Examples/sql_example.qmd) show the complete filmography of Andie MacDowell and Nicole Kidman , including the title of each movie, its production year, and the character she portrayed, arranged chronologically.

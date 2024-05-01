@@ -40,6 +40,8 @@ website:
       href: Examples/map_example.qmd
     - text: Table
       href: Examples/data_wrangling.qmd
+    - text: SQL
+      href: Examples/sql_example.qmd
     - icon: github
       href: https://www.github.com
 

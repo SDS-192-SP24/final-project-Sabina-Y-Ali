@@ -1,0 +1,70 @@
+---
+title: "Querying a MySQL database"
+format:  html
+  
+execute: 
+  echo: false
+---
+
+```{r global_options, include=FALSE}
+#| include: false
+posted <- Sys.time() > "2020-11-25 11:00:00 EDT"
+```
+
+Using SQL queries on the school's server, I have compiled data related to the filmographies of actresses Andie MacDowell and Nicole Kidman.
+
+```{r, message=FALSE}
+#| include: false
+#| 
+library(tidyverse)
+library(RMySQL)
+db <- dbConnect(
+  MySQL(),
+  host = "scidb.smith.edu",
+  user = "sds192",
+  password = "DSismfc@S",
+  dbname = "imdb"
+  )
+knitr::opts_chunk$set(connection= 'db', max.print = 5)
+```
+
+
+```{r}
+#| include: false
+
+class(db)
+```
+
+
+```{sql, connection='db' , include=FALSE}
+
+USE imdb;
+```
+ 
+For Andie MacDowell, I've created a table detailing her complete filmography, including the title of each movie, its production year, and the character she portrayed, arranged chronologically.
+
+
+```{sql, connection='db', echo= FALSE}
+
+SELECT t.title, t.production_year, cn.name
+FROM cast_info ci
+JOIN  char_name cn  ON cn.id = ci.person_role_id
+JOIN   title t ON t.id = ci.movie_id
+WHERE ci.person_id = 3479179
+  AND t.kind_id = 1
+ORDER BY production_year ;
+```
+
+
+
+In the following table, I've extracted data from a webpage listing Nicole Kidman as the most prolific actress, specifically capturing the names and production years of all the movies she's been in, ordered by production year in descending order.
+
+```{sql,connection='db', echo=FALSE}
+SELECT t.title, t.production_year, cn.name
+FROM cast_info ci
+JOIN  char_name cn  ON cn.id = ci.person_role_id
+JOIN   title t ON t.id = ci.movie_id
+WHERE ci.person_id = 3353717
+  AND t.kind_id = 1
+ORDER BY production_year DESC;
+```
