@@ -19,11 +19,11 @@ format:
   html:
     theme:
       light: flatly
-      dark: darkly
+      dark: superhero
 
 website:   
   page-navigation: true
-  favicon: /images/ice_pop.jpg
+  favicon: /images/cat_icon.jpeg
   title: "My page"
   
   
